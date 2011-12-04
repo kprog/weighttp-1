@@ -1,0 +1,27 @@
+#!/usr/bin/make -f
+# -*- makefile -*-
+
+# Uncomment this to turn on verbose mode. 
+export DH_VERBOSE=1
+
+WAF = ./waf
+
+
+%:
+	dh $@
+
+override_dh_auto_configure:
+	$(WAF) configure --prefix=/usr
+
+override_dh_auto_build:
+	$(WAF) build
+
+override_dh_auto_install:
+	$(WAF) install --destdir=$(CURDIR)/debian/weighttp
+
+override_dh_auto_clean:
+	$(WAF) distclean
+	dh_auto_clean
+	rm -f .lock-wscript
+	rm -rf .waf*
+	rm -rf build/

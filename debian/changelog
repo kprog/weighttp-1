@@ -1,0 +1,19 @@
+weighttp (0.3-3) oneiric; urgency=low
+
+  * Updated waf to 1.6.9
+  - debian/rules: clean build/ and waf files
+
+ -- Sergey Shepelev <temotor@gmail.com>  Sun, 04 Dec 2011 21:03:38 +0400
+
+weighttp (0.3-2) oneiric; urgency=low
+
+  * Launchpad does not accept 'unstable' distro version. Changed to oneiric
+  - Make lintian happy
+
+ -- Sergey Shepelev <temotor@gmail.com>  Sun, 04 Dec 2011 20:42:58 +0400
+
+weighttp (0.3-1) unstable; urgency=low
+
+  * Initial release
+
+ -- Sergey Shepelev <temotor@gmail.com>  Sun, 04 Dec 2011 03:09:36 +0400

@@ -1,0 +1,23 @@
+Source: weighttp
+Section: universe/web
+Priority: extra
+Maintainer: Sergey Shepelev <temotor@gmail.com>
+Build-Depends: debhelper (>= 8.0.0), libev-dev (>= 4.04), python (>= 2.3)
+Standards-Version: 3.9.2
+Homepage: http://weighttp.lighttpd.net/ 
+Vcs-Git: git://git.lighttpd.net/weighttp
+Vcs-Browser: http://cgit.lighttpd.net/weighttp/
+
+Package: weighttp
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}, libev4 (>= 4.04)
+Description: Lightweight and small benchmarking tool for webservers.
+ It was designed to be very fast and easy to use and only supports a tiny
+ fraction of the HTTP protocol in order to be lean and simple.
+ weighttp supports multithreading to make good use of modern CPUs with
+ multiple cores as well as asynchronous i/o for concurrent requests within
+ a single thread.
+ For event handling, weighty relies on libev which fits the design perfectly,
+ being lightweight and fast itself. Thanks to that, weighty supports all
+ modern high-performance event interfaces like epoll or kqueue, that the major
+ OSs provide.
