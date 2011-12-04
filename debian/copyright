@@ -3,7 +3,7 @@ Upstream-Name: weighttp
 Source: http://weighttp.lighttpd.net/
 
 Files: waf
-Copyright: 2005-2010 Thomas Nagy
+Copyright: 2005-2011 Thomas Nagy
 License: BSD-3-clause
  Redistribution and use in source and binary forms, with or without
  modification, are permitted provided that the following conditions
