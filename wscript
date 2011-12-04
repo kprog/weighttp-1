@@ -18,11 +18,11 @@ VERSION='0.3'
 APPNAME='weighttp'
 
 # these variables are mandatory ('/' are converted automatically)
-srcdir = '.'
-blddir = 'build'
+top = '.'
+out = 'build'
 
 
-def set_options(opt):
+def options(opt):
 	opt.tool_options('compiler_cc')
 	
 	# ./waf configure options
@@ -59,7 +59,7 @@ def configure(conf):
 
 def build(bld):
 	bld.new_task_gen(
-		features = 'cc cprogram',
+		features = 'c cprogram',
 		source = ['src/client.c', 'src/weighttp.c', 'src/worker.c'],
 		defines = ['HAVE_CONFIG_H=1', 'VERSION="' + VERSION + '"'],
 		includes = '.',
